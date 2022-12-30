@@ -7,6 +7,7 @@ import SearchComponent from "./Components/SearchComponent.js";
 import NoResultsComponent from "./Components/NoResultsComponent.js";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import AboutUsComponent from "./Components/AboutUsComponent.js";
+import ErrorComponent   from "./Components/ErrorComponent.js"
 
 const HeadingComponent=()=>(
 <div id="title" className="title-class" tabIndex="1">
@@ -67,12 +68,13 @@ const AppLayout =()=>(
 
 const appRouter = createBrowserRouter([
     {
-        path: "/",
-        element: <AppLayout/>
+        path : "/",
+        element : <AppLayout/>,
+        errorElement : <ErrorComponent/>
     },
     {
-        path:"/AboutUs",
-        element:<AboutUsComponent/>
+        path : "/AboutUs",
+        element : <AboutUsComponent/>
     }
 ]);
 
