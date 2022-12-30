@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from "react";
 import ReactDom from "react-dom/client";
-import CardComponent from "./CardComponent.js";
-import data from "./data.json"
-import { title } from "./Constants.js";
-import SearchComponent from "./SearchComponent.js";
-import NoResultsComponent from "./NoResultsComponent.js";
+import CardComponent from "./Components/CardComponent.js";
+import data from "./Common/data.json"
+import { title } from "./Common/Constants.js";
+import SearchComponent from "./Components/SearchComponent.js";
+import NoResultsComponent from "./Components/NoResultsComponent.js";
 
 const HeadingComponent=()=>(
 <div id="title" className="title-class" tabIndex="1">
