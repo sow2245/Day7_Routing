@@ -1,0 +1,31 @@
+#title{
+    font-size: 2em;
+}
+
+#card
+{
+    width: 180px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+#card >img{width: 100%;}
+
+.card-container{    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#searchBox
+{
+    margin: 8px;
+}
+
+.search{
+    margin-top: 13px;
+}
+
+.noResults{
+    padding-left: 20px;
+}

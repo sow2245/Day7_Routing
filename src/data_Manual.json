@@ -1,0 +1,82 @@
+[
+    {
+        "id":"00001",
+        "img":"./Img/Sowmya.png",
+        "name" :"Punuru Sowmya Reddy",
+        "company": "Landmark Health Pvt Ltd",
+        "address" :"Bangalore",
+        "designation":"Senior Software Engineer"
+    },
+    {
+        "id":"00002",
+        "img":"./Img/Sowmya.png",
+        "name": "Shivam Pandey",
+        "company": "Korber Supply Chain",
+        "address": "Mirzapur",
+        "designation":"Software Engineer"
+    },
+    {
+        "id":"00003",
+        "img":"./Img/Sowmya.png",
+        "name": "Harshita Mangla",
+        "company": "GJUST",
+        "address": "Faridabad",
+        "designation":"Student"
+    },
+    {
+        "id":"00004",
+        "img":"./Img/Sowmya.png",
+        "name": "Sumathi",
+        "company": "Capgemini",
+        "address": "Guntur",
+        "designation":"Software Engineer"
+    },
+    {
+        "id":"00005",
+        "img":"./Img/Sowmya.png",
+        "name": "Atul Singh",
+        "company": "Appinventiv Technologies",
+        "address": "Noida",
+        "designation":"Software Engineer"
+    },
+    {
+        "id":"00006",
+        "img":"./Img/Sowmya.png",
+        "name": "Prajwali",
+        "company": "Zeta",
+        "address": "Bengaluru",
+        "designation":"Senior Software Engineer"
+    },
+    {
+        "id":"00007",
+        "img":"./Img/Sowmya.png",
+        "name": "Pranav",
+        "company": "ITC Infotech",
+        "address": "Bengaluru",
+        "designation":"Senior Software Engineer"
+    },
+    {
+        "id":"00008",
+        "img":"./Img/Sowmya.png",
+        "name": "Priya",
+        "company": "Manhattan Associates",
+        "address": "Bengaluru",
+        "designation":"Software Engineer"
+    },
+    {
+        "id":"00009",
+        "img":"./Img/Sowmya.png",
+        "name": "Samridhi Pandey",
+        "company": "HPE",
+        "address": "Noida",
+        "designation":"Software Engineer"
+    },
+    {
+        "id":"00010",
+        "img":"./Img/Sowmya.png",
+        "name": "Utpal Sangwan",
+        "company": "Ramjas College",
+        "address": "Vijaynagar",
+        "designation":"Student"
+    }
+]
