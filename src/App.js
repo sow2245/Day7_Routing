@@ -5,6 +5,7 @@ import data from "./Common/data.json"
 import { title } from "./Common/Constants.js";
 import SearchComponent from "./Components/SearchComponent.js";
 import NoResultsComponent from "./Components/NoResultsComponent.js";
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
 const HeadingComponent=()=>(
 <div id="title" className="title-class" tabIndex="1">
@@ -63,5 +64,12 @@ const AppLayout =()=>(
     </>
 );
 
+const appRouter = createBrowserRouter([
+    {
+        path: "/",
+        element: <AppLayout/>
+    }
+]);
+
 const root = ReactDom.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
+root.render(<RouterProvider router={appRouter}/>);
