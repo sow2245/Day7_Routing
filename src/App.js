@@ -6,6 +6,7 @@ import { title } from "./Common/Constants.js";
 import SearchComponent from "./Components/SearchComponent.js";
 import NoResultsComponent from "./Components/NoResultsComponent.js";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import AboutUsComponent from "./Components/AboutUsComponent.js";
 
 const HeadingComponent=()=>(
 <div id="title" className="title-class" tabIndex="1">
@@ -68,6 +69,10 @@ const appRouter = createBrowserRouter([
     {
         path: "/",
         element: <AppLayout/>
+    },
+    {
+        path:"/AboutUs",
+        element:<AboutUsComponent/>
     }
 ]);
 
