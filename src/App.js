@@ -1,13 +1,14 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, Children } from "react";
 import ReactDom from "react-dom/client";
 import CardComponent from "./Components/CardComponent.js";
 import data from "./Common/data.json"
 import { title } from "./Common/Constants.js";
 import SearchComponent from "./Components/SearchComponent.js";
 import NoResultsComponent from "./Components/NoResultsComponent.js";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 import AboutUsComponent from "./Components/AboutUsComponent.js";
 import ErrorComponent   from "./Components/ErrorComponent.js"
+import TeamMemberComponent from "./Components/TeamMemberComponent.js";
 
 const HeadingComponent=()=>(
 <div id="title" className="title-class" tabIndex="1">
@@ -18,19 +19,12 @@ const HeadingComponent=()=>(
 
 //Way of binding the data for No Results
 const CardContainer=({filteredData})=>{
-    // Type 1
-    // if(!filteredData.length)  return <NoResultsComponent/>;
-    // else
-    // return filteredData.map((teamMembers)=>(
-    //     <CardComponent teamMembers={teamMembers} key={teamMembers.id}/>
-    // ));
-    //Type 2
     return (!filteredData.length?  <NoResultsComponent/> : filteredData.map((teamMembers)=>(
         <CardComponent teamMembers={teamMembers} key={teamMembers.id}/>
     )));
 };
 
-const BodyComponent=()=>{
+const SearchTeamMembersComponent=()=>{
     const [listOfTeamMembers,setListOfTeamMembers]=useState([]);
     const [filteredData,setFilteredData]=useState([]);
     const [isSearched,setIsSearched]=useState(false);
@@ -62,7 +56,7 @@ const BodyComponent=()=>{
 const AppLayout =()=>(
     <>
     <HeadingComponent/>
-    <BodyComponent/>
+    <Outlet/>
     </>
 );
 
@@ -70,7 +64,17 @@ const appRouter = createBrowserRouter([
     {
         path : "/",
         element : <AppLayout/>,
-        errorElement : <ErrorComponent/>
+        errorElement : <ErrorComponent/>,
+        children : [
+            {
+                path : "/searchteammembers",
+                element : <SearchTeamMembersComponent/>
+            },
+            {
+                path : "/teammember/:id",
+                element : <TeamMemberComponent/>
+            }
+        ]
     },
     {
         path : "/AboutUs",
