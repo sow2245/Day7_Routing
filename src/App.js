@@ -77,7 +77,7 @@ const appRouter = createBrowserRouter([
         ]
     },
     {
-        path : "/AboutUs",
+        path : "/aboutus",
         element : <AboutUsComponent/>
     }
 ]);
