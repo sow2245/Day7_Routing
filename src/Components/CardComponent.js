@@ -1,4 +1,5 @@
 const CardComponent=(props)=>{
+    if( !props?.teamMembers) return null;
     const teamMembers=props.teamMembers;
     return (
         <div id="card" className="cardClass">
@@ -8,7 +9,7 @@ const CardComponent=(props)=>{
             <h4>Location : {teamMembers.location ? teamMembers.location : "NA"}</h4>
             <h5>Public Repositories : {teamMembers.public_repos}</h5>
         </div>
-    )
+    );
 };
 
 export default CardComponent;
