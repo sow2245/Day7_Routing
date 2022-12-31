@@ -5,7 +5,7 @@ import data from "./Common/data.json"
 import { title } from "./Common/Constants.js";
 import SearchComponent from "./Components/SearchComponent.js";
 import NoResultsComponent from "./Components/NoResultsComponent.js";
-import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import { createBrowserRouter,RouterProvider,Outlet, Link } from "react-router-dom";
 import AboutUsComponent from "./Components/AboutUsComponent.js";
 import ErrorComponent   from "./Components/ErrorComponent.js"
 import TeamMemberComponent from "./Components/TeamMemberComponent.js";
@@ -17,10 +17,11 @@ const HeadingComponent=()=>(
 );
 
 
-//Way of binding the data for No Results
 const CardContainer=({filteredData})=>{
     return (!filteredData.length?  <NoResultsComponent/> : filteredData.map((teamMembers)=>(
+        <Link to={`/teammember/${teamMembers.login}`}>
         <CardComponent teamMembers={teamMembers} key={teamMembers.id}/>
+        </Link>
     )));
 };
 
